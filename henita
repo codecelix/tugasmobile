@@ -1,0 +1,33 @@
+class Laptop {
+  // Fields
+  String brand;
+  String model;
+
+  // Constructor dengan keyword 'this'
+  Laptop(this.brand, this.model);
+
+  // Method 1 dengan 3 fields
+  void updateLaptop(String newBrand, String newModel, String processor) {
+    this.brand = newBrand;
+    this.model = newModel;
+    print('Updated Laptop - Processor: $processor');
+  }
+
+  // Method 2 dengan 3 fields
+  void displayLaptopInfo(int ramSize, int storageSize, String operatingSystem) {
+    print('Brand: $brand');
+    print('Model: $model');
+    print('RAM Size: ${ramSize}GB');
+    print('Storage Size: ${storageSize}GB');
+    print('Operating System: $operatingSystem');
+  }
+}
+
+void main() {
+  // Membuat objek dari class Laptop
+  Laptop myLaptop = Laptop('Dell', 'Inspiron 15');
+
+  // Memanggil method
+  myLaptop.updateLaptop('HP', 'Pavilion 14', 'Intel Core i7');
+  myLaptop.displayLaptopInfo(16, 512, 'Windows 10');
+}
